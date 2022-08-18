@@ -132,3 +132,18 @@ if((nombre == "andres" || nombre == "ANDRES") && (nombre !== "")){
 }else{
   alert("No ingresaste los datos correctamente");
 }
+
+
+if(tarea === "si" || casa === "si"){
+  if(tarea === "si"){
+    if(casa === "si"){
+      console.log("puedes salir");
+    }else{
+      console.log("Tienes que organizar casa");
+    }
+  }else{
+    console.log("tienes que hacer la tarea");
+  }
+}else{
+  console.log("no puedes salir tienes que hacer las dos cosas");
+}
