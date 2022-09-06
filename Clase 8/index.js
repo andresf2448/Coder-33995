@@ -122,10 +122,37 @@ for (const producto of productosFiltrados) {
                    <b>${producto.precio}</b>`;
 
   contenedor.append(div);
-}
- */
+} */
+
 
 /* let div = document.querySelectorAll(".contenedor");
 console.log(div); */
 
-let parrafo = document.querySelector("#contenedor p");
+/* let parrafo = document.querySelector("#contenedor p"); */
+
+/* let perritos = document.getElementsByClassName("perritos");
+
+let seleccion = parseInt(prompt("Ingrese el id"));
+
+perritos[seleccion].className = "rojo"; */
+
+const productos = [
+  { id: 1, nombre: "camisa", precio: 1000 },
+  { id: 2, nombre: "pantalon", precio: 700 },
+  { id: 3, nombre: "gorra", precio: 1300 },
+  { id: 4, nombre: "zapato", precio: 1500 },
+];
+
+let contenedor = document.getElementById("contenedor");
+let precio = parseInt(prompt("Ingrese el precio minimo"));
+
+let productosFiltrados = productos.filter(item => item.precio > precio);
+
+for (const producto of productosFiltrados) {
+  let div = document.createElement("div");
+  div.innerHTML = `<h3> ID: ${producto.id}</h3>
+                   <p>Producto: ${producto.nombre}</p>
+                   <b>${producto.precio}</b>`;
+
+  contenedor.append(div);
+}
