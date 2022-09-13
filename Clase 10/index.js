@@ -83,7 +83,9 @@ let carrito = [];
 if (carritoStorage) {
   carrito = JSON.parse(carritoStorage);
 }
-
+const agregar = (id) => {
+  console.log(id);
+}
 if (carrito.length > 0) {
   carrito.forEach((elemento) => {
     let item = document.createElement("div");
@@ -91,8 +93,12 @@ if (carrito.length > 0) {
                       <h2>Id: ${elemento.id}</h2>
                       <p>Nombre: ${elemento.producto}</p>
                       <b>$${elemento.precio}</b>
+                      <button id="agregar${elemento.id}">Agregar</button>
     `;
+
     document.body.append(item);
+    let botonAgregar = document.getElementById(`agregar${elemento.id}`);
+    botonAgregar.addEventListener("click", () => agregar(elemento.id));
   });
 } else {
   let item = document.createElement("div");
